@@ -2,6 +2,7 @@
 #define PROCESSO_HPP
 
 #include <vector>
+#include <limits.h>
 #include <iostream>
 
 class Swapper{
@@ -12,6 +13,8 @@ class Swapper{
       ~Swapper();
 
       void FIFO(std::vector <int> listaReferencias, int qtdQuadros);
+      void OTM(std::vector <int> listaReferencias, int qtdQuadros);
+      void LRU(std::vector <int> listaReferencias, int qtdQuadros);
 
       int faltaPagina;
 

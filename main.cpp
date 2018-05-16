@@ -2,8 +2,6 @@
     Matrícula: 115040304  */
 
 #include <fstream>
-#include <iomanip>
-
 #include "swapper.hpp"
 
 /*  Função CriaLista recebe como parâmetro um nome de arquivo de entrada e uma
@@ -43,11 +41,15 @@ int main(){
 
     std::vector <int> listaReferencias = CriaLista("input.txt", &qtdQuadros);
 
-    Swapper fifo;
+    Swapper fifo, otm, lru;
 
     fifo.FIFO(listaReferencias, qtdQuadros);
+    otm.OTM(listaReferencias, qtdQuadros);
+    lru.LRU(listaReferencias, qtdQuadros);
 
     std::cout <<"FIFO " << fifo.faltaPagina << std::endl;
+    std::cout <<"OTM " << otm.faltaPagina << std::endl;
+    std::cout <<"LRU " << lru.faltaPagina << std::endl;
 
     return 0;
 }
