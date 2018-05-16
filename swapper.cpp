@@ -131,7 +131,7 @@ void Swapper::LRU(std::vector <int> listaReferencias, int qtdQuadros){
 
     /* Inicializa o array de idade com um valor máximo menos o número de quadros */
     for(int u = 0; u < qtdQuadros; u++){
-        idade[u] = INT_MAX - qtdQuadros;
+        idade[u] = INT_MAX / 2;
     }
 
     /* Percorre a lista de referências */
